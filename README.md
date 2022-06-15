@@ -1,1 +1,51 @@
 # project3
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_Form(object):
+    def setupUi(self, Form):
+        Form.setObjectName("Form")
+        Form.resize(604, 438)
+        self.UpperLabel = QtWidgets.QLabel(Form)
+        self.UpperLabel.setGeometry(QtCore.QRect(30, 30, 91, 21))
+        self.UpperLabel.setObjectName("UpperLabel")
+        self.LowerLabel = QtWidgets.QLabel(Form)
+        self.LowerLabel.setGeometry(QtCore.QRect(210, 30, 91, 21))
+        self.LowerLabel.setObjectName("LowerLabel")
+        self.NumberLabel = QtWidgets.QLabel(Form)
+        self.NumberLabel.setGeometry(QtCore.QRect(410, 190, 161, 21))
+        self.NumberLabel.setObjectName("NumberLabel")
+        self.Status = QtWidgets.QLabel(Form)
+        self.Status.setGeometry(QtCore.QRect(40, 380, 511, 21))
+        self.Status.setObjectName("Status")
+        self.NumbersText = QtWidgets.QTextEdit(Form)
+        self.NumbersText.setGeometry(QtCore.QRect(30, 80, 371, 241))
+        self.NumbersText.setObjectName("NumbersText")
+        self.ULine = QtWidgets.QLineEdit(Form)
+        self.ULine.setGeometry(QtCore.QRect(30, 50, 171, 21))
+        self.ULine.setObjectName("ULine")
+        self.LLine = QtWidgets.QLineEdit(Form)
+        self.LLine.setGeometry(QtCore.QRect(210, 50, 191, 21))
+        self.LLine.setObjectName("LLine")
+        self.PrintCheckBox = QtWidgets.QCheckBox(Form)
+        self.PrintCheckBox.setGeometry(QtCore.QRect(30, 330, 91, 21))
+        self.PrintCheckBox.setObjectName("PrintCheckBox")
+        self.WriteCheckBox = QtWidgets.QCheckBox(Form)
+        self.WriteCheckBox.setGeometry(QtCore.QRect(220, 330, 91, 21))
+        self.WriteCheckBox.setObjectName("WriteCheckBox")
+        self.GenerateButton = QtWidgets.QPushButton(Form)
+        self.GenerateButton.setGeometry(QtCore.QRect(430, 30, 101, 31))
+        self.GenerateButton.setObjectName("GenerateButton")
+
+        self.retranslateUi(Form)
+        QtCore.QMetaObject.connectSlotsByName(Form)
+
+    def retranslateUi(self, Form):
+        _translate = QtCore.QCoreApplication.translate
+        Form.setWindowTitle(_translate("Form", "Form"))
+        self.UpperLabel.setText(_translate("Form", "Upper Limit"))
+        self.LowerLabel.setText(_translate("Form", "Lower Limit"))
+        self.NumberLabel.setText(_translate("Form", "Please Enter Values"))
+        self.Status.setText(_translate("Form", "Status"))
+        self.PrintCheckBox.setText(_translate("Form", "Print Text Box"))
+        self.WriteCheckBox.setText(_translate("Form", "Write To File"))
+        self.GenerateButton.setText(_translate("Form", "Generate Numbers"))
